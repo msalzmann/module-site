@@ -4,14 +4,6 @@
 
 class site::profile::base {
   include ::tools
-#  include ::sysctl::base
-
-
-  # deaktivate firewire and usb-storage modules
-  #  kmod::blacklist { ['firewire-ohci','usb-storage']: }
-
-
-# for testing hardening index with lynis
 
 exec { "git clone https://github.com/CISOfy/lynis.git /usr/local/bin/lynis":
   path   => "/usr/bin:/usr/sbin:/bin:/usr/local/bin",
