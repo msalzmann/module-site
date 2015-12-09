@@ -4,7 +4,7 @@
 
 class site::profile::base {
   include ::tools
-  include ::sysctl::base
+#  include ::sysctl::base
 
 
   # deaktivate firewire and usb-storage modules
