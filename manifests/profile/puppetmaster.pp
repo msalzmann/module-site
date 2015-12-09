@@ -2,9 +2,8 @@
 ### Hier wird das Hiera File eingebunden
 
  class site::profile::puppetmaster {
-  include ::firewall
 
-
+class { 'firewall': }
 
 #### Firewall rules ####
 
