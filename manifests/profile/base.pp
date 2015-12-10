@@ -29,26 +29,6 @@ file {'remove_old_directory':
      force => true,
      }
 
-#cron::job { 'update-lynis':
-#    minute      => '5',
-#    hour        => '2',
-#    date        => '*',
-#    month       => '*',
-#    weekday     => '*',
-#    user        => 'root',
-#    command     => 'cd /usr/local/bin/lynis && git pull',
-#    environment => [ 'MAILTO=root', 'PATH="/usr/bin:/bin:/usr/local/bin"', ],
-#}
-#cron::job { 'run-lynis':
-#    minute      => '10',
-#    hour        => '2',
-#    date        => '*',
-#    month       => '*',
-#    weekday     => '*',
-#    user        => 'root',
-#    command     => 'lynisrun',
-#    environment => [ 'MAILTO=root', 'PATH="/usr/bin:/bin:/usr/local/bin"', ],
-#}
 
 file { 'lynis-report.date' :
     path  => "/var/log/lynis-report.dat",
